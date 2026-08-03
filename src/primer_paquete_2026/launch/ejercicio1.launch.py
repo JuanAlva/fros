@@ -2,56 +2,53 @@ import launch
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 
+
 def generate_launch_description():
-    # Declare launch arguments
     counter_max_arg = launch.actions.DeclareLaunchArgument(
         'counter_max',
-        default_value='10',
+        default_value='100',
         description='Maximum count value before publisher shuts down'
     )
 
     timer_period_arg = launch.actions.DeclareLaunchArgument(
         'timer_period',
-        default_value='1.0',
-        description='Timer period in seconds for publishing counter values'
+        default_value='0.2',
+        description='Timer period in seconds for publishing counter values (0.2 = 5 Hz)'
     )
 
     reset_arg = launch.actions.DeclareLaunchArgument(
         'reset_value',
-        default_value='5.0',
-        description='Subscriber reset value'
+        default_value='50',
+        description='Counter value at which the subscriber resets the publisher'
     )
 
-    # Create publisher node with counter_max parameter
     publisher_node = Node(
-        package='clase2',
-        executable='counter_publisher',
+        package='primer_paquete_2026',
+        executable='clase2_ejer1_publisher.py',
         name='counter_publisher',
         output='screen',
         parameters=[
-            {'counter_max':LaunchConfiguration('counter_max')},
-            {'timer_period':LaunchConfiguration('timer_period')}
+            {'counter_max': LaunchConfiguration('counter_max')},
+            {'timer_period': LaunchConfiguration('timer_period')}
         ],
         on_exit=launch.actions.Shutdown()
     )
 
-    # Create subscriber node
     subscriber_node = Node(
-        package='clase2',
-        executable='counter_subscriber',
+        package='primer_paquete_2026',
+        executable='clase2_ejer1_suscriber.py',
         name='counter_subscriber',
         output='screen',
         parameters=[
-            {'reset_value':LaunchConfiguration('reset_value')}
+            {'reset_value': LaunchConfiguration('reset_value')}
         ]
     )
 
-    # Create launch description and add nodes and arguments
     ld = launch.LaunchDescription()
     ld.add_action(counter_max_arg)
     ld.add_action(timer_period_arg)
     ld.add_action(reset_arg)
     ld.add_action(publisher_node)
     ld.add_action(subscriber_node)
-    
+
     return ld

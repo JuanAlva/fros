@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
@@ -15,8 +16,8 @@ class CounterSubscriber(Node):
             10)
         self.subscription  # prevent unused variable warning
 
-        self.declare_parameter('reset_value', 2.0)
-        self.reset_value = self.get_parameter('reset_value').get_parameter_value().double_value
+        self.declare_parameter('reset_value', 50)
+        self.reset_value = self.get_parameter('reset_value').get_parameter_value().integer_value
 
         self.cli = self.create_client(Trigger, 'reset_counter')
         while not self.cli.wait_for_service(timeout_sec=1.0):
