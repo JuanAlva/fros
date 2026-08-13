@@ -1,0 +1,18 @@
+{
+    "keys": {},
+    "groups": {
+        "mainwindow": {
+            "keys": {},
+            "groups": {}
+        },
+        "pluginmanager": {
+            "keys": {
+                "running-plugins": {
+                    "type": "repr",
+                    "repr": "{'rqt_topic/TopicPlugin': [1], 'rqt_bag/Bag': [1]}"
+                }
+            },
+            "groups": {}
+        }
+    }
+}

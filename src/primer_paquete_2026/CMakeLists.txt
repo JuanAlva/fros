@@ -32,6 +32,12 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}/ejercicio4
 )
 
+install(DIRECTORY
+  crear_pkg/rviz
+  crear_pkg/rqt
+  DESTINATION share/${PROJECT_NAME}/crear_pkg
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
