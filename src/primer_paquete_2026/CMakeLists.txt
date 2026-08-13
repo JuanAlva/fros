@@ -18,6 +18,7 @@ install(PROGRAMS
   ejercicio1/scripts/ejercicio1_subscriber.py
   ejercicio2/scripts/ejercicio2_action_server.py
   ejercicio2/scripts/ejercicio2_action_client.py
+  ejercicio5/scripts/gui_apply_torque.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -36,6 +37,14 @@ install(DIRECTORY
   crear_pkg/rviz
   crear_pkg/rqt
   DESTINATION share/${PROJECT_NAME}/crear_pkg
+)
+
+install(DIRECTORY
+  ejercicio5/robot_description
+  ejercicio5/config
+  ejercicio5/models
+  ejercicio5/worlds
+  DESTINATION share/${PROJECT_NAME}/ejercicio5
 )
 
 if(BUILD_TESTING)
