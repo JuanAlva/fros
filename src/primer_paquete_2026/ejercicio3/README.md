@@ -1,6 +1,4 @@
-# Ejercicio 3 — Análisis del doble péndulo (`clase3`)
-
-Resolución de los puntos 1 a 4 de `ejercicio3.md`, verificada corriendo `ros2 launch clase3 dp_launch.py`.
+# Ejercicio 3
 
 ## 1. Nodos del sistema
 
