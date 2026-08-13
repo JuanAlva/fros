@@ -1,4 +1,4 @@
-# Ejercicio 1 — Publisher/Subscriber con reset por servicio
+# Ejercicio 1
 
 ## Consigna
 

@@ -1,4 +1,4 @@
-# Ejercicio 2 — Action server/client con feedback palabra por palabra
+# Ejercicio 2
 
 ## Consigna
 
