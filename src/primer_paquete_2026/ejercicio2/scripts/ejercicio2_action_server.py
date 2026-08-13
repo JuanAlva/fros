@@ -12,7 +12,7 @@ from primer_paquete_2026.action import MyAction
 class TextActionServer(Node):
 
     def __init__(self):
-        super().__init__('clase2_action_server')
+        super().__init__('ejercicio2_action_server')
         self._action_server = ActionServer(
             self,
             MyAction,

@@ -24,7 +24,7 @@ def generate_launch_description():
 
     publisher_node = Node(
         package='primer_paquete_2026',
-        executable='clase2_ejer1_publisher.py',
+        executable='ejercicio1_publisher.py',
         name='counter_publisher',
         output='screen',
         parameters=[
@@ -36,7 +36,7 @@ def generate_launch_description():
 
     subscriber_node = Node(
         package='primer_paquete_2026',
-        executable='clase2_ejer1_suscriber.py',
+        executable='ejercicio1_subscriber.py',
         name='counter_subscriber',
         output='screen',
         parameters=[

@@ -14,7 +14,7 @@ from primer_paquete_2026.action import MyAction
 class TextActionClient(Node):
 
     def __init__(self):
-        super().__init__('clase2_action_client')
+        super().__init__('ejercicio2_action_client')
 
         self.declare_parameter('text', 'Hola mundo desde ROS 2')
         self.text = self.get_parameter('text').get_parameter_value().string_value

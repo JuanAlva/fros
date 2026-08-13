@@ -12,15 +12,15 @@ def generate_launch_description():
 
     server_node = Node(
         package='primer_paquete_2026',
-        executable='clase2_action_server.py',
-        name='clase2_action_server',
+        executable='ejercicio2_action_server.py',
+        name='ejercicio2_action_server',
         output='screen',
     )
 
     client_node = Node(
         package='primer_paquete_2026',
-        executable='clase2_action_client.py',
-        name='clase2_action_client',
+        executable='ejercicio2_action_client.py',
+        name='ejercicio2_action_client',
         output='screen',
         parameters=[
             {'text': LaunchConfiguration('text')}

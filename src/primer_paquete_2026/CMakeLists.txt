@@ -7,21 +7,17 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_python REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 "action/MyAction.action"
 )
 
-ament_python_install_package(ejercicio1)
-ament_python_install_package(ejercicio2)
-
 install(PROGRAMS
-  ejercicio1/clase2_ejer1_publisher.py
-  ejercicio1/clase2_ejer1_suscriber.py
-  ejercicio2/clase2_action_server.py
-  ejercicio2/clase2_action_client.py
+  ejercicio1/scripts/ejercicio1_publisher.py
+  ejercicio1/scripts/ejercicio1_subscriber.py
+  ejercicio2/scripts/ejercicio2_action_server.py
+  ejercicio2/scripts/ejercicio2_action_client.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
