@@ -9,7 +9,6 @@ Escenario de manipulación con el MyCobot320 y la pinza `adaptive_gripper`, usan
 [Presentación en drive](https://drive.google.com/file/d/1rGSL3_CuDVEcMvKlU2jjPjB1rFEzlIZ7/view)
 
 ## Archivos involucrados
-
 - `launch/tp_final.launch.py`
 - `tp_final/robot_description/mycobot_320_m5_2022/mycobot_320_m5_2022.xacro` (fusión brazo + garra)
 - `tp_final/config/mycobot_320_m5_2022/ros2_controllers.yaml`
