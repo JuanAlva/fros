@@ -19,6 +19,11 @@ install(PROGRAMS
   ejercicio2/scripts/ejercicio2_action_server.py
   ejercicio2/scripts/ejercicio2_action_client.py
   ejercicio5/scripts/gui_apply_torque.py
+  tp_final/scripts/hello_moveit.py
+  tp_final/scripts/hello_moveit_obstacles.py
+  tp_final/scripts/move_to_joints.py
+  tp_final/scripts/move_to_pose.py
+  tp_final/scripts/pregrasp_goal.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -46,6 +51,15 @@ install(DIRECTORY
   ejercicio5/worlds
   DESTINATION share/${PROJECT_NAME}/ejercicio5
 )
+
+install(DIRECTORY
+  tp_final/robot_description
+  tp_final/config
+  tp_final/models
+  tp_final/worlds
+  DESTINATION share/${PROJECT_NAME}/tp_final
+)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
