@@ -3,24 +3,22 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
-
 
 def generate_launch_description():
 
-    robot_description = Command(
-        [
-            FindExecutable(name='xacro'),
-            ' ',
-            PathJoinSubstitution(
-                [FindPackageShare('primer_paquete_2026'),
-                 'ejercicio4', 'robot_description', 'double_pendulum_ext.urdf.xacro']
-            ),
-        ]
+    # Ruta al URDF
+    urdf_file = os.path.join(
+        get_package_share_directory('primer_paquete_2026'),
+        'ejercicio4','robot_description','dp',
+        'double_pendulum.urdf'
     )
 
+    # Leer contenido del URDF
+    with open(urdf_file, 'r') as file:
+        robot_description = file.read()
+
     return LaunchDescription([
+
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
@@ -44,7 +42,9 @@ def generate_launch_description():
                 '-d',
                 os.path.join(
                     get_package_share_directory('primer_paquete_2026'),
-                    'ejercicio4', 'config', 'display.rviz'
+                    'ejercicio4',
+                    'config',
+                    'display.rviz'
                 )
             ]
         )

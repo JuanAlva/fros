@@ -33,15 +33,15 @@ install(DIRECTORY
 )
 
 install(DIRECTORY
-  ejercicio4/robot_description
-  ejercicio4/config
-  DESTINATION share/${PROJECT_NAME}/ejercicio4
-)
-
-install(DIRECTORY
   crear_pkg/rviz
   crear_pkg/rqt
   DESTINATION share/${PROJECT_NAME}/crear_pkg
+)
+
+install(DIRECTORY
+  ejercicio4/robot_description
+  ejercicio4/config
+  DESTINATION share/${PROJECT_NAME}/ejercicio4
 )
 
 install(DIRECTORY
