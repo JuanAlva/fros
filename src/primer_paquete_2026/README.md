@@ -19,7 +19,7 @@ source install/setup.bash
 ros2 launch primer_paquete_2026 tp_final.launch.py
 ```
 
-Al arrancar, a veces `joint_state_broadcaster` no llega a activarse solo por una carrera de timing contra Gazebo. Si en RViz ves el robot sin transformadas (TF) o `ros2 control list_controllers` lo muestra `inactive`, activalo a mano:
+Al arrancar, a veces `joint_state_broadcaster` no llega a activarse solo por una carrera de timing contra Gazebo.
 
 ```bash
 ros2 control set_controller_state joint_state_broadcaster active
