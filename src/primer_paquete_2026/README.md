@@ -16,12 +16,20 @@ primer_paquete_2026/
 │   └── README.md
 ├── ejercicio4/               # Sin código Python: modelo URDF/XACRO extendido
 │   ├── robot_description/
-│   └── config/
+│   ├── config/
+│   └── README.md
+├── ejercicio5/                # Doble péndulo caótico en Gazebo + GUI de torque
+│   ├── robot_description/, worlds/, models/, config/, scripts/
+│   └── README.md
+├── tp_final/                   # Ver sección "TP Final" más abajo
 ├── action/                    # Interfaz custom (MyAction.action), usada por ejercicio2
-└── launch/                     # Un launch file por ejercicio
+└── launch/                     # Un launch file por ejercicio + tp_final
     ├── ejercicio1.launch.py
     ├── ejercicio2.launch.py
-    └── ejercicio4.launch.py
+    ├── ejercicio4.launch.py
+    ├── ejercicio4_xacro.launch.py
+    ├── ejercicio5.launch.py
+    └── tp_final.launch.py
 ```
 
 ## Ejercicios
@@ -30,6 +38,7 @@ primer_paquete_2026/
 - [Ejercicio 2](ejercicio2/README.md) — Action server/client con feedback palabra por palabra.
 - [Ejercicio 3](ejercicio3/README.md) — Análisis de TF2 sobre `clase3` (sin código propio).
 - [Ejercicio 4](ejercicio4/README.md) — Extensión XACRO del doble péndulo.
+- [Ejercicio 5](ejercicio5/README.md) — Doble péndulo caótico en Gazebo con aplicación manual de torque.
 
 ## TP Final — Manipulación con MyCobot320
 

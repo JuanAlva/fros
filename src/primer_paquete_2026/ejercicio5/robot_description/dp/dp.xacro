@@ -97,9 +97,7 @@
     <parent link="base_link" />
     <child link="link1" />
     <origin xyz="0 0 ${height0+width1/2.0}" rpy="0 0 0" />
-    <axis xyz="0 0 1"> 
-      <initial_position>$(arg q1_ini)</initial_position>
-    </axis>
+    <axis xyz="0 0 1" />
     <limit effort="$(arg tau1_max)" lower="$(arg q1_min)" upper="$(arg q1_max)"
       velocity="$(arg qp1_max)" />
     <dynamics damping="$(arg damping1)" friction="$(arg friction1)" />
@@ -110,9 +108,7 @@
     <parent link="link1" />
     <child link="link2" />
     <origin xyz="${a1} 0 ${-width1}" rpy="0 0 0" />
-    <axis xyz="0 0 1"> 
-      <initial_position>$(arg q2_ini)</initial_position>
-    </axis>
+    <axis xyz="0 0 1" />
     <limit effort="$(arg tau2_max)" lower="$(arg q2_min)" upper="$(arg q2_max)"
       velocity="$(arg qp2_max)" />
     <dynamics damping="$(arg damping2)" friction="$(arg friction2)" />
