@@ -1,8 +1,12 @@
-# TP Final — Manipulación con MyCobot320
+# TP - Manipulación con MyCobot320
 
 Escenario de manipulación con el MyCobot320 y la pinza `adaptive_gripper`, usando `ros2_control` y MoveIt2: mundo de Gazebo con 3 objetos sobre un escritorio, esos mismos objetos como obstáculos en la Planning Scene, y un script que lleva el efector final a una pose de pre-grasp planificando y ejecutando una trayectoria que los esquiva.
 
 ![tp final gif](docs/gif.gif)
+
+
+## Video 
+[Presentación en drive](https://drive.google.com/file/d/1rGSL3_CuDVEcMvKlU2jjPjB1rFEzlIZ7/view)
 
 ## Archivos involucrados
 
